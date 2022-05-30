@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ResourceNamespaceSeeder::class);
         $this->call(ResourceSeeder::class);
         $this->call(UserSeeder::class);
+        $this->call(SystemUserAttributeSeeder::class);
     }
 }
