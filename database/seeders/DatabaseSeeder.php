@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(SystemSettingSeeder::class);
         $this->call(ResourceNamespaceSeeder::class);
+        $this->call(ResourceSeeder::class);
     }
 }
