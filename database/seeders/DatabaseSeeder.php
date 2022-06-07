@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(SystemSettingSeeder::class);
+        $this->call(ResourceNamespaceSeeder::class);
     }
 }
