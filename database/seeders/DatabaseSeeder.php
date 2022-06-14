@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
         $this->call(SystemUserAttributeSeeder::class);
         $this->call(UserAttributeSeeder::class);
         $this->call(SystemUserGuardSeeder::class);
+        $this->call(UserGuardSeeder::class);
     }
 }
