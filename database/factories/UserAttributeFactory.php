@@ -25,12 +25,14 @@ class UserAttributeFactory extends Factory
     public function withAttribute($attribute)
     {
         switch ($attribute->key) {
+            case 'login_failed':
+                return $this->state(fn () => ['value' => UserGenerator::loginFailed()]);
             case 'nickname':
                 return $this->state(fn () => ['value' => UserGenerator::nickname()]);
             case 'birthday':
                 return $this->state(fn () => ['value' => UserGenerator::birthday()]);
             case 'gender':
-                return $this->state(fn () => ['value' => UserGenerator::gender()]);
+                return $this->state(fn () => ['value' => UserGenerator::gender()->value]);
         }
         return $this;
     }

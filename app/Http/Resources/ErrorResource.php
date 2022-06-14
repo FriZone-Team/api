@@ -4,7 +4,6 @@ namespace App\Http\Resources;
 
 use App\Exceptions\AppException;
 use Illuminate\Http\Resources\Json\JsonResource;
-use ReflectionClass;
 
 class ErrorResource extends JsonResource
 {

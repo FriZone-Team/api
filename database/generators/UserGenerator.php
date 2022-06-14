@@ -2,6 +2,8 @@
 
 namespace Database\Generators;
 
+use App\Enums\UserGender;
+
 class UserGenerator extends Generator
 {
     public function getNickname()
@@ -16,7 +18,12 @@ class UserGenerator extends Generator
 
     public function getGender()
     {
-        return $this->faker->randomElement(['MALE', 'FEMALE']);
+        return $this->faker->randomElement(UserGender::cases());
+    }
+
+    public function getLoginFailed()
+    {
+        return $this->faker->randomDigit();
     }
 
     public function getPassword()

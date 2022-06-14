@@ -18,6 +18,7 @@ class UserAttributeSeeder extends Seeder
     public function run()
     {
         $rates = [
+            'login_failed' => .3,
             'nickname' => .9,
             'birthday' => .75,
             'gender' => .75,

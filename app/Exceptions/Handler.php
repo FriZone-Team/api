@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use App\Http\Resources\ErrorResource;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Database\QueryException;
+use Illuminate\Http\Request;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -45,7 +46,7 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->renderable(fn (AppException $ex) => new ErrorResource($ex));
+        $this->renderable(fn (AppException $ex, Request $req) => (new ErrorResource($ex))->toResponse($req));
         $this->map(QueryException::class, DatabaseRawException::class);
     }
 }

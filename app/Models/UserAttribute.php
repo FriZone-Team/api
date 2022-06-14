@@ -20,8 +20,7 @@ class UserAttribute extends BaseModel
      *
      * @var array<int, string>
      */
-    protected $hidden = [
-    ];
+    protected $hidden = [];
 
     /**
      * The attributes that should be cast.
